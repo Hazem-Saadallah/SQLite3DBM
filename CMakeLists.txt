@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.31)
 
 project(SQLite3DBM LANGUAGES C CXX VERSION 0.1.2)
 
+option(BUILD_TESTS "Build the main.cxx test executable" OFF)
+
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_C_COMPILER gcc)
 set(CMAKE_CXX_COMPILER g++)
@@ -50,7 +52,9 @@ set(TEST_SOURCES
   # ${CMAKE_CURRENT_SOURCE_DIR}/tests/performance.cxx
 )
 
-add_executable(${BIN_NAME} ${TEST_SOURCES})
-target_include_directories(${BIN_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
-target_link_libraries(${BIN_NAME} PRIVATE ${PROJECT_NAME})
-target_compile_options(${BIN_NAME} PRIVATE -Wall -Wextra)
+if(BUILD_TESTS)
+  add_executable(${BIN_NAME} ${TEST_SOURCES})
+  target_include_directories(${BIN_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+  target_link_libraries(${BIN_NAME} PRIVATE ${PROJECT_NAME})
+  target_compile_options(${BIN_NAME} PRIVATE -Wall -Wextra)
+endif()
