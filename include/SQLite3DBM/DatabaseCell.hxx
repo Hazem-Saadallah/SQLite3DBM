@@ -2,6 +2,7 @@
 
 #include <cmath>
 #include <memory>
+#include <optional>
 #include <string>
 #include <cstdint>
 #include <unordered_map>
@@ -31,10 +32,10 @@ public:
   [[nodiscard]] _DatabaseManager::SqlType_t get_type() const;
   [[nodiscard]] std::uint8_t get_index() const;
 
-  [[nodiscard]] const std::int64_t* as_integer() const;
-  [[nodiscard]] const std::double_t* as_double() const;
-  [[nodiscard]] const std::string* as_string() const;
-  [[nodiscard]] const _DatabaseManager::SqlBlob_t* as_blob() const;
+  [[nodiscard]] const std::optional<std::int64_t> as_integer() const;
+  [[nodiscard]] const std::optional<std::double_t> as_double() const;
+  [[nodiscard]] const std::optional<std::string> as_string() const;
+  [[nodiscard]] const std::optional<_DatabaseManager::SqlBlob_t> as_blob() const;
 
   [[nodiscard]] bool is_null() const;
   [[nodiscard]] bool is_integer() const;

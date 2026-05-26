@@ -1,4 +1,5 @@
 #include <memory>
+#include <optional>
 #include <variant>
 #include <SQLite3DBM/DatabaseCell.hxx>
 
@@ -22,10 +23,25 @@ std::string _DatabaseCell::get_name() const { return m_CellDescription->get_name
 _DatabaseManager::SqlType_t _DatabaseCell::get_type() const { return m_Type; }
 std::uint8_t _DatabaseCell::get_index() const { return m_CellDescription->get_index(); }
 
-const std::int64_t* _DatabaseCell::as_integer() const { return std::get_if<std::int64_t>(&m_Data); }
-const std::double_t* _DatabaseCell::as_double() const { return std::get_if<std::double_t>(&m_Data); }
-const std::string* _DatabaseCell::as_string() const { return std::get_if<std::string>(&m_Data); }
-const _DatabaseManager::SqlBlob_t* _DatabaseCell::as_blob() const { return std::get_if<_DatabaseManager::SqlBlob_t>(&m_Data); }
+const std::optional<std::int64_t> _DatabaseCell::as_integer() const {
+  if(const std::int64_t* ptr = std::get_if<std::int64_t>(&m_Data)) return *ptr;
+  return std::nullopt;
+}
+
+const std::optional<std::double_t> _DatabaseCell::as_double() const {
+  if(const std::double_t* ptr = std::get_if<std::double_t>(&m_Data)) return *ptr;
+  return std::nullopt;
+}
+
+const std::optional<std::string> _DatabaseCell::as_string() const {
+  if(const std::string* ptr = std::get_if<std::string>(&m_Data)) return *ptr;
+  return std::nullopt;
+}
+
+const std::optional<_DatabaseManager::SqlBlob_t> _DatabaseCell::as_blob() const {
+  if(const _DatabaseManager::SqlBlob_t* ptr = std::get_if<_DatabaseManager::SqlBlob_t>(&m_Data)) return *ptr;
+  return std::nullopt;
+}
 
 bool _DatabaseCell::is_null() const { return get_type() == _DatabaseManager::SqlType_t::NULL_CELL; }
 bool _DatabaseCell::is_integer() const { return get_type() == _DatabaseManager::SqlType_t::INTEGER; }
