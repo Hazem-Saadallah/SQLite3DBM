@@ -6,8 +6,8 @@
 #include <cstdint>
 #include <unordered_map>
 #include <sqlite3.h>
-#include <DatabaseManager.hxx>
-#include <CellDescriptor.hxx>
+#include <SQLite3DBM/DatabaseManager.hxx>
+#include <SQLite3DBM/CellDescriptor.hxx>
 
 class _DatabaseCell {
 private:

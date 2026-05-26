@@ -7,7 +7,7 @@
 #include <utility>
 #include <variant>
 #include <vector>
-#include <BiMap.hxx>
+#include <SQLite3DBM/BiMap.hxx>
 
 namespace _DatabaseManager {
   enum class ErrorCode_t : std::uint8_t {

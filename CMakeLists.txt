@@ -29,13 +29,13 @@ endif()
 
 # -----------------------------------------------------------------------------
 set(SOURCES
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/DatabaseManager.cxx
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/DatabaseConnection.cxx
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/CellDescriptor.cxx
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/DatabaseRow.cxx
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/DatabaseCell.cxx
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/DatabaseQuery.cxx
-  ${CMAKE_CURRENT_SOURCE_DIR}/src/Sqlite3Binder.cxx
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/SQLite3DBM/DatabaseManager.cxx
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/SQLite3DBM/DatabaseConnection.cxx
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/SQLite3DBM/CellDescriptor.cxx
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/SQLite3DBM/DatabaseRow.cxx
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/SQLite3DBM/DatabaseCell.cxx
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/SQLite3DBM/DatabaseQuery.cxx
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/SQLite3DBM/Sqlite3Binder.cxx
 )
 
 add_library(${PROJECT_NAME} SHARED ${SOURCES})

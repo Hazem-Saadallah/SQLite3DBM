@@ -2,8 +2,8 @@
 
 #include <string>
 #include <cstdint>
-#include <BiMap.hxx>
-#include <DatabaseManager.hxx>
+#include <SQLite3DBM/BiMap.hxx>
+#include <SQLite3DBM/DatabaseManager.hxx>
 
 class _CellDescriptor {
 private:

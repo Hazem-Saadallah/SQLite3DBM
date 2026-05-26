@@ -4,10 +4,10 @@
 #include <string>
 #include <cstdint>
 #include <sqlite3.h>
-#include <DatabaseCell.hxx>
-#include <DatabaseManager.hxx>
-#include <CellDescriptor.hxx>
-#include <DatabaseRowIterator.hxx>
+#include <SQLite3DBM/DatabaseCell.hxx>
+#include <SQLite3DBM/DatabaseManager.hxx>
+#include <SQLite3DBM/CellDescriptor.hxx>
+#include <SQLite3DBM/DatabaseRowIterator.hxx>
 
 class _DatabaseRow {
 private:

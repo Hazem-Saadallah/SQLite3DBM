@@ -3,7 +3,7 @@
 #include <iterator>
 #include <type_traits>
 #include <unordered_map>
-#include <DatabaseCell.hxx>
+#include <SQLite3DBM/DatabaseCell.hxx>
 
 template <bool IsConst> class _DatabaseRowIterator {
 public:

@@ -5,7 +5,7 @@
 #include <type_traits>
 #include <unordered_map>
 #include <functional>
-#include <BiMapIterator.hxx>
+#include <SQLite3DBM/BiMapIterator.hxx>
 
 template <typename T, typename=void> class is_hashable : public std::false_type {};
 template <typename T> class is_hashable<T, std::void_t<decltype(std::hash<T>{}(std::declval<T>()))>> : public std::true_type {};

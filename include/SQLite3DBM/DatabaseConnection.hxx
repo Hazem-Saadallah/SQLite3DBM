@@ -6,7 +6,7 @@
 #include <sqlite3.h>
 #include <vector>
 #include <bitset>
-#include <DatabaseManager.hxx>
+#include <SQLite3DBM/DatabaseManager.hxx>
 
 class _DatabaseConnection {
 friend class _DatabaseQuery;

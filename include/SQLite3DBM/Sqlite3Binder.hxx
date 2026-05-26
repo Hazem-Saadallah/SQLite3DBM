@@ -5,7 +5,7 @@
 #include <variant>
 #include <cstdint>
 #include <sqlite3.h>
-#include <DatabaseManager.hxx>
+#include <SQLite3DBM/DatabaseManager.hxx>
 
 class _Sqlite3Binder {
 public:

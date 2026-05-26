@@ -1,4 +1,3 @@
-#include "DatabaseCell.hxx"
 #include <format>
 #include <memory>
 #include <fstream>
@@ -6,10 +5,11 @@
 #include <utility>
 #include <filesystem>
 #include <sqlite3.h>
-#include <ErrorMsg.hxx>
-#include <Sqlite3Binder.hxx>
-#include <DatabaseQuery.hxx>
-#include <DatabaseManager.hxx>
+#include <SQLite3DBM/ErrorMsg.hxx>
+#include <SQLite3DBM/Sqlite3Binder.hxx>
+#include <SQLite3DBM/DatabaseQuery.hxx>
+#include <SQLite3DBM/DatabaseManager.hxx>
+#include <SQLite3DBM/DatabaseCell.hxx>
 
 #include <iostream>
 

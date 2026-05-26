@@ -1,6 +1,6 @@
 #include <memory>
 #include <variant>
-#include <DatabaseCell.hxx>
+#include <SQLite3DBM/DatabaseCell.hxx>
 
 _DatabaseCell::_DatabaseCell(_DatabaseManager::SqlCell_t&& data, const _DatabaseManager::SqlType_t& type, const std::shared_ptr<_CellDescriptor>& cell_descriptor)
 : m_Data(std::move(data)), m_Type(type), m_CellDescription(std::move(cell_descriptor)) {}

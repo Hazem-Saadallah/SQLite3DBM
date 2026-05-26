@@ -1,6 +1,6 @@
 #include <cassert>
-#include <DatabaseRow.hxx>
-#include <CellDescriptor.hxx>
+#include <SQLite3DBM/DatabaseRow.hxx>
+#include <SQLite3DBM/CellDescriptor.hxx>
 
 _DatabaseRow::_DatabaseRow(const std::shared_ptr<_DatabaseManager::RowDescription_t>& row_description, _DatabaseManager::RowData_t&& row_data)
 : m_Data(std::move(row_data)), m_RowDescription(row_description) {

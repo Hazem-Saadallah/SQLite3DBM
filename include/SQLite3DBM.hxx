@@ -1,8 +1,8 @@
 #include <memory>
-#include <DatabaseRow.hxx>
-#include <DatabaseQuery.hxx>
-#include <DatabaseManager.hxx>
-#include <DatabaseConnection.hxx>
+#include <SQLite3DBM/DatabaseRow.hxx>
+#include <SQLite3DBM/DatabaseQuery.hxx>
+#include <SQLite3DBM/DatabaseManager.hxx>
+#include <SQLite3DBM/DatabaseConnection.hxx>
 
 namespace SQLite3DBM {
   using namespace _DatabaseManager;

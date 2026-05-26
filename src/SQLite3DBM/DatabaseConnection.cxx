@@ -1,9 +1,9 @@
 #include <memory>
 #include <string>
-#include <DatabaseManager.hxx>
-#include <ErrorMsg.hxx>
-#include <Sqlite3Binder.hxx>
-#include <DatabaseConnection.hxx>
+#include <SQLite3DBM/DatabaseManager.hxx>
+#include <SQLite3DBM/ErrorMsg.hxx>
+#include <SQLite3DBM/Sqlite3Binder.hxx>
+#include <SQLite3DBM/DatabaseConnection.hxx>
 #include <utility>
 
 

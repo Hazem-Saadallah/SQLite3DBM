@@ -5,10 +5,10 @@
 #include <vector>
 #include <cstdint>
 #include <sqlite3.h>
-#include <DatabaseConnection.hxx>
-#include <DatabaseManager.hxx>
-#include <DatabaseRow.hxx>
-#include <DatabaseCell.hxx>
+#include <SQLite3DBM/DatabaseConnection.hxx>
+#include <SQLite3DBM/DatabaseManager.hxx>
+#include <SQLite3DBM/DatabaseRow.hxx>
+#include <SQLite3DBM/DatabaseCell.hxx>
 
 class _StatementDeleter {
 public:

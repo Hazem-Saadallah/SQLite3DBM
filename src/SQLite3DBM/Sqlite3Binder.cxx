@@ -1,4 +1,4 @@
-#include <Sqlite3Binder.hxx>
+#include <SQLite3DBM/Sqlite3Binder.hxx>
 
 
 std::int32_t _Sqlite3Binder::operator()(std::monostate) const { return sqlite3_bind_null(m_Statement, m_Index); }

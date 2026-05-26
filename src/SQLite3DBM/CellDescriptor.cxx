@@ -1,5 +1,5 @@
 #include <utility>
-#include <CellDescriptor.hxx>
+#include <SQLite3DBM/CellDescriptor.hxx>
 
 _CellDescriptor::_CellDescriptor(std::uint8_t index, std::string&& name)
 : m_Index(index), m_Name(std::move(name)) { }

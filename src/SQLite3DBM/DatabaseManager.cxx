@@ -2,7 +2,7 @@
 #include <cstdint>
 #include <fstream>
 #include <filesystem>
-#include <DatabaseManager.hxx>
+#include <SQLite3DBM/DatabaseManager.hxx>
 
 _DatabaseManager::SqlBlob_t _DatabaseManager::BLOB_IO::read_blob(std::string file_path) {
   std::ifstream file(file_path, std::ios::binary | std::ios::ate);
